@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  apache:
+    build: .
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - 80:80
