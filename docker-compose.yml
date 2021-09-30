@@ -3,7 +3,10 @@ version: '2'
 services:
   apache:
     build: .
+    restart: always
+    ports:
+      - 127.0.0.1:8001:80
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
     volumes:
       - ./src:/var/www/html
-    ports:
-      - 80:80
