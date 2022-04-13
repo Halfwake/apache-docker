@@ -7,5 +7,5 @@ COPY sites-available /etc/apache2/sites-available
 
 RUN rm -rf /var/www/html
 
-ENTRYPOINT ["/usr/bin/dumb-init", "--rewrite", "15:28", "--"]
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["/usr/sbin/apachectl", "-D FOREGROUND"]
